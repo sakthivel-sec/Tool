@@ -50,6 +50,7 @@ Usage in Your Tool:
 Suricata rules files typically use the .rules extension. To save your file with the provided example rules, follow these steps:
 
 Save the File with .rules Extension
+
 Open a Text Editor: Use any text editor like Notepad, Notepad++, VSCode, or any code editor you prefer.
 
 Copy the Rules: Copy the example rules text provided above into the text editor.
@@ -58,21 +59,35 @@ Save the File:
 
 File Name:
     Enter a file name with the .rules extension, e.g., example.rules.
+    
 Save as Type:
     Ensure the file type is set to "All Files" or similar, to avoid automatic formatting or extensions.
+    
 Encoding: 
     Use UTF-8 encoding to ensure no special characters are misinterpreted.
+    
 Save the File:
 
 In Notepad, click File > Save As.
+
 In the "Save as type" dropdown, select "All Files".
+
 Enter the file name with the .rules extension (e.g., example.rules).
+
 Click Save.
+
 Example in Notepad:
+
 Open Notepad.
+
 Paste the rules into Notepad.
+
 Click File > Save As.
+
 Enter example.rules as the file name.
+
 In the "Save as type" dropdown, select "All Files (.)".
+
 Click Save.
+
 Your file is now saved with the .rules extension and can be used with your Suricata configuration or your Python tool.
