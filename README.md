@@ -35,14 +35,14 @@ alert ip $HOME_NET any -> $EXTERNAL_NET any (msg:"Any traffic from home net"; si
 
 Explanation:
 
-alert:
+  #alert:
     The action to be taken when the rule matches (alert, drop, etc.).
     tcp, udp, ip: Protocols that the rule applies to.
     any any -> any 80: Source and destination IP addresses and ports.
     msg:"HTTP traffic": The message that will be logged when the rule matches.
     sid:1000001;: The unique identifier for the rule.
 
-Usage in Your Tool:
+#Usage in Your Tool:
     Save the above content in a file named example.rules.
     You can load this file into your PyQt5 application using the "Load Rules File" button.
 
@@ -55,7 +55,7 @@ Open a Text Editor: Use any text editor like Notepad, Notepad++, VSCode, or any 
 
 Copy the Rules: Copy the example rules text provided above into the text editor.
 
-Save the File:
+#Save the File:
 
 File Name:
     Enter a file name with the .rules extension, e.g., example.rules.
@@ -76,7 +76,7 @@ Enter the file name with the .rules extension (e.g., example.rules).
 
 Click Save.
 
-Example in Notepad:
+#Example in Notepad:
 
 Open Notepad.
 
