@@ -26,8 +26,11 @@ pip install pyqt5
 # This is a sample Suricata rules file.
 
 alert tcp any any -> any 80 (msg:"HTTP traffic"; sid:1000001;)
+
 alert udp any any -> any 53 (msg:"DNS query"; sid:1000002;)
+
 alert tcp $HOME_NET any -> $EXTERNAL_NET 22 (msg:"SSH traffic"; sid:1000003;)
+
 alert ip $HOME_NET any -> $EXTERNAL_NET any (msg:"Any traffic from home net"; sid:1000004;)
 
 Explanation:
