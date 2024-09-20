@@ -1,6 +1,7 @@
 import os
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QLabel, QPushButton, QListWidget, QFileDialog, QMessageBox
+from setuptools import setup
 
 class SuricataRulesManager(QWidget):
     def __init__(self):
@@ -104,9 +105,36 @@ class SuricataRulesManager(QWidget):
         else:
             QMessageBox.warning(self, "Warning", "No file loaded or no changes made.")
 
-
-if __name__ == "__main__":
+# The main function to run the application
+def main():
     app = QApplication(sys.argv)
     window = SuricataRulesManager()
     window.show()
     sys.exit(app.exec_())
+
+# Setup function to make the script installable
+def package_setup():
+    setup(
+        name='SuricataRulesManager',  # Name of your tool
+        version='1.0',
+        description='A tool for controlling Suricata rules configuration',
+        author='Sakthivel P.',
+        author_email='your_email@example.com',
+        py_modules=['suricata_rules_manager'],  # Your script file name (without the .py extension)
+        install_requires=[
+            'PyQt5',  # Dependencies
+        ],
+        entry_points={
+            'console_scripts': [
+                'suricata-rules-manager=suricata_rules_manager:main',  # Entry point for command-line use
+            ],
+        },
+    )
+
+# Entry point logic
+if __name__ == "__main__":
+    if len(sys.argv) > 1 and sys.argv[1] == 'setup':
+        package_setup()  # Run setup if 'setup' argument is provided
+    else:
+        main()  # Run the application if no 'setup' argument
+
