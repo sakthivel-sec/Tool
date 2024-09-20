@@ -91,3 +91,28 @@ Example in Notepad:
   Click Save.
 
 Your file is now saved with the .rules extension and can be used with your Suricata configuration or your Python tool.
+
+Updated suricata_rules_manager.py
+Add a setup() function within the file to handle the packaging.
+Keep the application code intact so it still functions as expected when run directly.
+
+Explanation:
+Encapsulated Setup Logic:
+
+The package_setup() function handles packaging and installation. It uses the setuptools.setup() function to configure the package. This is similar to what would have been in the setup.py file.
+
+Main Function Logic:
+
+The main() function is where the actual application logic resides, as it launches the PyQt5 GUI.
+Entry Point Control:
+    
+    If you run the script normally (without arguments), it will launch the GUI.
+    If you run the script with python suricata_rules_manager.py setup, it will execute the setup and install the application.
+Example:
+    python suricata_rules_manager.py setup  # To install the tool
+    python suricata_rules_manager.py        # To run the tool
+How to Use:
+  Install the application using the setup functionality:
+      python suricata_rules_manager.py setup
+Run the tool:
+      python suricata_rules_manager.py
