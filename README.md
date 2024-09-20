@@ -106,11 +106,11 @@ Main Function Logic:
 The main() function is where the actual application logic resides, as it launches the PyQt5 GUI.
 Entry Point Control:
     
-    If you run the script normally (without arguments), it will launch the GUI.
-    If you run the script with python suricata_rules_manager.py setup, it will execute the setup and install the application.
+  If you run the script normally (without arguments), it will launch the GUI.
+  If you run the script with python suricata_rules_manager.py setup, it will execute the setup and install the application.
 Example:
-    python suricata_rules_manager.py setup  # To install the tool
-    python suricata_rules_manager.py        # To run the tool
+       python suricata_rules_manager.py setup  # To install the tool
+       python suricata_rules_manager.py        # To run the tool
 How to Use:
   Install the application using the setup functionality:
       python suricata_rules_manager.py setup
